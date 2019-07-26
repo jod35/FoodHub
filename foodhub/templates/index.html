@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% for food in foods %}
+     <div class="item">
+         <div class="item-image">
+
+         </div>
+         <div class="des">
+            <img src="https://www.google.com/search?q=food&client=firefox-b-e&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj_nM6j0_DiAhUFJ1AKHadYDq0Q_AUIECgB&biw=1280&bih=647" alt="">
+            <p>{{food.name}}</p> 
+            <p>{{food.price}}</p>
+         </div>
+     </div>
+{% endfor %}
+{% endblock content %}
