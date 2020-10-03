@@ -1,4 +1,4 @@
-from foodhub import app
-from foodhub import routes
+from foodhub import create_app
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    create_app()

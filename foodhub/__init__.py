@@ -1,13 +1,10 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+from .utils.database import db
 
 
-app=Flask(__name__)
-app.config['SECRET_KEY']="SADSGHD9SD89AS7DAD09@@3E34"
-app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///food.db"
+def create_app():
+    app = Flask(__name__)
 
-db=SQLAlchemy(app)
-migrate=Migrate(app,db)
+    db.init_app(app)
 
-
+    return app
